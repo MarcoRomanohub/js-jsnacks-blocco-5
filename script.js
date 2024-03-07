@@ -86,3 +86,14 @@ function calculateTotalWeight(arrayZucchinaLength) {
 
 console.log('Peso totale delle zucchine corte:', calculateTotalWeight(zucchineCorte).toFixed(2)  + ' gr');
 console.log('Peso totale delle zucchine lunghe:', calculateTotalWeight(zucchineLunghe).toFixed(2)  + ' gr');
+
+// JSnack 3
+const string = 'ciao';
+const reversedString = reverse(string);
+
+function reverse(string) {
+  return string.split('').reverse().join('');
+}
+
+console.log('String :', string);
+console.log('Reversed String :', reversedString);
