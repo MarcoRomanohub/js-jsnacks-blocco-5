@@ -60,3 +60,29 @@ zucchine.forEach(zucchina => {
 })
 
 console.log(sum);
+
+// JSnack 2
+
+let arrayZucchine = [];
+console.log(arrayZucchine);
+for (let i = 0; i < 10; i++) {
+  const length = Math.floor(Math.random() * 25) + 5; 
+  const weight = calculateWeight(length);
+  arrayZucchine.push({ length, weight });
+}
+
+function calculateWeight(length) {
+  return length * 0.1;
+};
+
+const zucchineCorte = arrayZucchine.filter(zucchina => zucchina.length < 15);
+const zucchineLunghe = arrayZucchine.filter(zucchina => zucchina.length >= 15);
+
+// console.log(zucchineCorte);
+
+function calculateTotalWeight(arrayZucchinaLength) {
+  return arrayZucchinaLength.reduce((totale, zucchina) => totale + zucchina.weight, 0);
+}
+
+console.log('Peso totale delle zucchine corte:', calculateTotalWeight(zucchineCorte).toFixed(2)  + ' gr');
+console.log('Peso totale delle zucchine lunghe:', calculateTotalWeight(zucchineLunghe).toFixed(2)  + ' gr');
