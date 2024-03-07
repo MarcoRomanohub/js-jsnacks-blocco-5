@@ -97,3 +97,23 @@ function reverse(string) {
 
 console.log('String :', string);
 console.log('Reversed String :', reversedString);
+
+
+// JSnack 4
+
+const array1 = ['a', 'b', 'c'];
+const array2 = [1, 2, 3];
+const mergedResult = mergeArrays(array1, array2);
+console.log(mergedResult);
+
+function mergeArrays(array1, array2) {
+  const mergedArray = [];
+
+  
+  for (let i = 0; i < array1.length; i++) {
+      mergedArray.push(array1[i]);
+      mergedArray.push(array2[i]);
+  }
+
+  return mergedArray;
+}
